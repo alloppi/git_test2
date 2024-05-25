@@ -26,11 +26,14 @@ git push origin master
 ```
 ### Work on project locally, create the repository on GitHub and push project to remote
 ```
+#### Create a new repository in GitHub
+mkdir [NAME OF REPOSITORY]
 cd [NAME OF REPOSITORY]
+echo "# git_test2" >> README.md
 git init
+git add README.md
 git status
-git add [FILENAME] [FILENAME] [...]
-git add .
-git commit -m "Add comment"
-git remote
-git push origin master
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:alloppi/git_test2.git
+git push -u origin main
