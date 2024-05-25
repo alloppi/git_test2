@@ -1,4 +1,22 @@
 # Git (Version Control System)
+
+Version control system keeps track of changes to a group of files. When you have a history of these changes, it lets you find specific versions, compare changes between versions, recover files you may have deleted, or revert files to previous versions.
+
+A distributed version control system means that different users maintain their own repositories of a project, instead of working from one central repository. Users have full file tracking abilities and the project’s complete version history without needing access to a central server or network.
+
+## Three Sections of a Git Project
+1, Git directory: (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
+2. Working directory: Pulls the project’s files from the Git directory’s object database and makes local changes to a project.
+3. Staging area: a cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
+
+## GitHub Workflow
+1. Branching
+2. Commits
+3. Pull Request
+4. Collaborate
+5. Merge
+
+
 ## Git Install for Ubuntu
 ```
 sudo apt update
@@ -6,7 +24,11 @@ sudo apt-get install git
 git --version
 git config --global user.name "Alan  Chan"
 git config --global user.email "alloppi@gmail.com
+git config --global color.ui true
 ```
+
+## GitHub SSH access
+Setup GitHub SSH sccess [GitHub SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 ## Working with GitHub projects
 ### Create the repository, clone it to Ubuntu
@@ -37,3 +59,10 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:alloppi/git_test2.git
 git push -u origin main
+
+### Help in Git
+```
+git help COMMAND
+git COMMAND --help
+man git-COMMAND
+```
