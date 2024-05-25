@@ -68,3 +68,13 @@ git help COMMAND
 git COMMAND --help
 man git-COMMAND
 ```
+
+### Git commands
+```
+git remote -v
+git branch
+```
+
+### Braching
+git checkout -b feature_x
+git checkout main
