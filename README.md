@@ -5,7 +5,7 @@ Version control system keeps track of changes to a group of files. When you have
 A distributed version control system means that different users maintain their own repositories of a project, instead of working from one central repository. Users have full file tracking abilities and the project’s complete version history without needing access to a central server or network.
 
 ## Three Sections of a Git Project
-1, Git directory: (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
+1. Git directory: (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
 2. Working directory: Pulls the project’s files from the Git directory’s object database and makes local changes to a project.
 3. Staging area: Cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
 
