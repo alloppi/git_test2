@@ -73,6 +73,7 @@ man git-COMMAND
 ```
 git remote -v
 git branch
+git commit -am "Modify only"
 ```
 
 ### Braching
