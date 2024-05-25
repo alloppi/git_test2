@@ -7,7 +7,7 @@ A distributed version control system means that different users maintain their o
 ## Three Sections of a Git Project
 1, Git directory: (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
 2. Working directory: Pulls the project’s files from the Git directory’s object database and makes local changes to a project.
-3. Staging area: a cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
+3. Staging area: Cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
 
 ## GitHub Workflow
 1. Branching
@@ -42,9 +42,10 @@ git clone [HTTPS ADDRESS]
 ```
 git status
 git add [FILENAME] [FILENAME] [...]
-git commit -m "Add comment"
+git add *
+git commit -m "Add commit message"
 git remote
-git push origin master
+git push origin main
 ```
 ### Work on project locally, create the repository on GitHub and push project to remote
 ```
@@ -59,6 +60,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:alloppi/git_test2.git
 git push -u origin main
+```
 
 ### Help in Git
 ```
