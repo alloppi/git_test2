@@ -22,9 +22,12 @@ A distributed version control system means that different users maintain their o
 sudo apt update
 sudo apt-get install git
 git --version
-git config --global user.name "Alan  Chan"
+git config --global user.name "Alan Chan"
 git config --global user.email "alloppi@gmail.com
 git config --global color.ui true
+git config --global core.editor "code --wait"
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 
 ## GitHub SSH access
@@ -74,8 +77,24 @@ man git-COMMAND
 git remote -v
 git branch
 git commit -am "Modify only"
+git ls-files
+git rm [FILENAME] [FILENAME] [...]
+git mv [NEW_FILE] [OLD_FILE]
+git status -s
+git diff --staged
+git difftool --staged
+git log
+git log --oneline --reverse
+git show d601b90
+git show HEAD
+git ls-tree HEAD~1
+git restore
+.gitignore > logs/ main.log *.log
 ```
 
-### Braching
+### Branching
+```
 git checkout -b feature_x
 git checkout main
+git branch -d feather_X
+```
