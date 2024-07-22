@@ -34,12 +34,12 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 Setup GitHub SSH sccess [GitHub SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 ## Working with GitHub projects
-### Create the repository, clone it to Ubuntu
-1. Create a new repository in GitHub
+### Create the repository in remote repo (GitHub), then clone it to Ubuntu
+1. Create a directory that save the new repository in GitHub
 2. Clone local copy of the repository
 ```
-cd [NAME OF REPOSITORY]
-git clone [HTTPS ADDRESS]
+cd [NAME OF DIRECTORY]
+git clone [HTTPS REPO ADDRESS (GitHub)]
 ```
 3. Four steps in a commit: ‘status’ , ‘add’ , ‘commit’ and ‘push’
 ```
@@ -74,6 +74,11 @@ man git-COMMAND
 
 ### Git commands
 ```
+git clone = bring a repository from the remote host (GitHuib) to local machine
+git add = Track files and changed in Git
+git commit = save files in Git
+git push = Upload Git to remote repo (GitHub)
+git pull = Download changes from remote repo to local machine, opposite to push
 git remote -v
 git branch
 git commit -am "Modify only"
