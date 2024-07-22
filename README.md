@@ -79,7 +79,8 @@ git add = Track files and changed in Git
 git commit = save files in Git
 git push = Upload Git to remote repo (GitHub)
 git pull = Download changes from remote repo to local machine, opposite to push
-git branch = Check any branchexit
+git branch = Check any branch in Git
+git checkout branch1 = Switch to branch1
 
 git remote -v
 git branch
@@ -101,7 +102,13 @@ git restore
 
 ### Branching
 ```
-git checkout -b feature_x
-git checkout main
-git branch -d feather_X
+git checkout -b feature_x = Create branch feature_x
+git checkout main = Switch to branch main
+git branch -d feather_x = Delete branch feather_x
 ```
+
+### Branching test 2
+```
+git checkout -b feature-readem-instructions
+
+### Local branch
