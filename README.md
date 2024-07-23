@@ -104,6 +104,7 @@ git restore
 ```
 git checkout -b feature_x = Create branch feature_x
 git checkout main = Switch back to branch main
+git diff feature_x = Difference between current branch & feature_x
 git branch -d feather_x = Delete branch feather_x
 ```
 
