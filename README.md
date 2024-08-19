@@ -134,10 +134,12 @@ git rebase --interactive <base>
 ```
 
 ### Common Error in GitHub
-Use SSH instead of HTTPS if pushing to GitHub have error:
+1. Use SSH instead of HTTPS if pushing to GitHub have error: 
+`
 git remote set-url origin git@github.com:username/repo.git
+`
 
 ### Testing for the Multiple Developers
-```
+`
 Testing
-```
+`
