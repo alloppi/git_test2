@@ -118,14 +118,20 @@ git reset (Hash)
 ```
 
 ### Code review by team and give comment in GitGub
+```
 1. Check every changes
 2. Discuss and comment by team
 3. Resolve conflicts code
 4. Merge & versioning
 [Find more details in GitHub](https://github.com/features/code-review)
-
-### Local branch development and merge back to main
+```
 
 ### Branch vs Rebase
+```
 [Git rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 git rebase --interactive <base>
+```
+### Testing for the Multiple Developers
+```
+Testing
+```
