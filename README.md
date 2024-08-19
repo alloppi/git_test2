@@ -123,14 +123,20 @@ git reset (Hash)
 2. Discuss and comment by team
 3. Resolve conflicts code
 4. Merge & versioning
-[Find more details in GitHub](https://github.com/features/code-review)
 ```
+[Find more details in GitHub](https://github.com/features/code-review)
+
 
 ### Branch vs Rebase
-```
 [Git rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+```
 git rebase --interactive <base>
 ```
+
+### Common Error in GitHub
+Use SSH instead of HTTPS if pushing to GitHub have error:
+git remote set-url origin git@github.com:username/repo.git
+
 ### Testing for the Multiple Developers
 ```
 Testing
