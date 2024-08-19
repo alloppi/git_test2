@@ -103,27 +103,40 @@ git restore
 
 ### Branching
 ```
-git checkout -b feature_x = Create branch feature_x
+git checkout -b <Branch> = Create branch <Branch>
 git checkout main = Switch back to branch main
-git diff feature_x = Difference between current branch & feature_x
-git branch -d feather_x = Delete branch feather_x
+git diff <Branch> = Difference between current branch & <Branch>
+git branch -d <Branch> = Delete branch <Branch>
+git push origin <Branch>
+```
+
+### Updating & Merging
+```
+git pull = update local repo to latest commit
+git merge <Branch> = Merge another branch into active <Branch>
+git diff <source_branch> <target_branch> = Preview the different before merging
+```
+
+### Tagging
+```
+git tag 1.0.0 <commit_id> 
 ```
 
 ### Git Undo, roll back
 ```
 git log = Check commit history
+git checkout -- <filename> = replace the changes to last HEAD
 git reset = Unstage: Undo after git add
 git reset HEAD~1 = Undo the last commit
-git reset (Hash)
+git reset <commit_id>
 ```
 
+
 ### Code review by team and give comment in GitGub
-```
 1. Check every changes
 2. Discuss and comment by team
 3. Resolve conflicts code
 4. Merge & versioning
-```
 [Find more details in GitHub](https://github.com/features/code-review)
 
 
@@ -135,11 +148,11 @@ git rebase --interactive <base>
 
 ### Common Error in GitHub
 1. Use SSH instead of HTTPS if pushing to GitHub have error: 
-`
+```
 git remote set-url origin git@github.com:username/repo.git
-`
+```
 
-### Testing for the Multiple Developers
-`
-Testing
-`
+### Testing for merging from multiple developers
+```
+Testing 
+```
