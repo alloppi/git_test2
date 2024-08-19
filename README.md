@@ -14,7 +14,8 @@ A distributed version control system means that different users maintain their o
 2. Commits
 3. Pull Request
 4. Collaborate
-5. Merge
+5. Merge or 
+6. Rebase
 
 
 ## Git Install for Ubuntu
@@ -31,7 +32,7 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 
 ## GitHub SSH access
-Setup GitHub SSH sccess [GitHub SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+Setup GitHub SSH sccess [GitHub SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 ## Working with GitHub projects
 ### I. Create the repository in remote repo (GitHub), then clone it to Ubuntu
@@ -108,9 +109,23 @@ git diff feature_x = Difference between current branch & feature_x
 git branch -d feather_x = Delete branch feather_x
 ```
 
-### Branching test 2
+### Git Undo, roll back
 ```
-git checkout -b feature-readem-instructions
+git log = Check commit history
+git reset = Unstage: Undo after git add
+git reset HEAD~1 = Undo the last commit
+git reset (Hash)
 ```
 
-### Local branch development
+### Code review by team and give comment in GitGub
+1. Check every changes
+2. Discuss and comment by team
+3. Resolve conflicts code
+4. Merge & versioning
+[Find more details in GitHub](https://github.com/features/code-review)
+
+### Local branch development and merge back to main
+
+### Branch vs Rebase
+[Git rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+git rebase --interactive <base>
