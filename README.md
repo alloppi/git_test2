@@ -1,4 +1,4 @@
-# Git (Version Control System)
+ # Git (Version Control System)
 
 Version control system keeps track of changes to a group of files. When you have a history of these changes, it lets you find specific versions, compare changes between versions, recover files you may have deleted, or revert files to previous versions.
 
@@ -89,6 +89,8 @@ git checkout branch1 = Switch to branch branch1
 git status = Check current branch, untracked files
 git rm <filename> = Remove file from staging area 
 git rm -r --cached . = Recusively remove all files from staging area
+git log = show all commit history
+git restore <filename> = discard changes after git commit
 
 git remote -v
 git branch
