@@ -5,7 +5,7 @@ Version control system keeps track of changes to a group of files. When you have
 A distributed version control system means that different users maintain their own repositories of a project, instead of working from one central repository. Users have full file tracking abilities and the project’s complete version history without needing access to a central server or network.
 
 ## Three Sections of a Git Project
-1. Git directory: (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
+1. Git directory or : (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
 2. Working directory: Pulls the project’s files from the Git directory’s object database and makes local changes to a project.
 3. Staging area: Cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
 
@@ -24,11 +24,12 @@ sudo apt update
 sudo apt-get install git
 git --version
 git config --global user.name "Alan Chan"
-git config --global user.email "alloppi@gmail.com
+git config --global user.email "alloppi@gmail.com"
 git config --global color.ui true
 git config --global core.editor "code --wait"
 git config --global diff.tool vscode
 git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+git config -l = List config
 ```
 
 ## GitHub SSH access
@@ -57,11 +58,11 @@ git push origin main
 mkdir [NAME OF REPOSITORY]
 cd [NAME OF REPOSITORY]
 echo "# git_test2" >> README.md
-git init
+git init 
 git add README.md
 git status
 git commit -m "first commit"
-git branch -M main
+git branch -m main
 git remote add origin git@github.com:alloppi/git_test2.git
 git push -u origin main
 ```
@@ -75,13 +76,19 @@ man git-COMMAND
 
 ### Git commands
 ```
+git --version
+git --help = contains good Git tutorial insided
+git init . = initial git repository
 git clone = bring a repository from the remote host (GitHuib) to local machine
-git add = Track files and changed in Git
-git commit = save files in Git
-git push = Upload Git to remote repo (GitHub)
-git pull = Download changes from remote repo to local machine, opposite to push
+git add . = Track all files in current dir and add to staging area
+git commit = save files in Git, add to commit history
+git push origin main = Upload Git commit history to remote repo (GitHub) in main branch
+gt pull = Download changes from remote repo to local machine, opposite to push
 git branch = Check any branches in Git
-git checkout branch1 = Switch to branch1
+git checkout branch1 = Switch to branch branch1
+git status = Check current branch, untracked files
+git rm <filename> = Remove file from staging area 
+git rm -r --cached . = Recusively remove all files from staging area
 
 git remote -v
 git branch
