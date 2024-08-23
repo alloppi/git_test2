@@ -1,4 +1,4 @@
- # Git (Version Control System)
+ # This repo was used to learn Git (Version Control System)
 
 Version control system keeps track of changes to a group of files. When you have a history of these changes, it lets you find specific versions, compare changes between versions, recover files you may have deleted, or revert files to previous versions.
 
@@ -83,10 +83,12 @@ git clone = bring a repository from the remote host (GitHuib) to local machine
 git add . = Track all files in current dir and add to staging area
 git add -A = Track all files in all dir
 git commit = save files in Git, add to commit history
+git remote add origin git@github.com:alloppi/git_test2.git = set remote 
 git push origin main = Upload Git commit history to remote repo (GitHub) in main branch
 git pull = Download changes from remote repo to local machine, opposite to push
-git branch = Check any branches in Git
-git checkout branch1 = Switch to branch branch1
+git branch = Check any branches in Git (-r for remote, -a for all)
+git branch feature_1 = Copy commit from current branch to branch feature1 
+git checkout feature_1 = Switch to branch feature_1
 git status = Check current branch, untracked files and track files
 git rm <filename> = Remove file from staging area to unstage
 git rm -r --cached . = Recusively remove all files from staging area to unstage
