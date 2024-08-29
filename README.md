@@ -86,8 +86,8 @@ git commit = save files in Git, add to commit history
 git remote add origin git@github.com:alloppi/git_test2.git = set remote 
 git push origin main = Upload Git commit history to remote repo (GitHub) in main branch
 git pull = Download changes from remote repo to local machine, opposite to push
-git branch = Check any branches in Git (-r for remote, -a for all, - for previous)
-git branch feature_1 = Copy commit from current branch to branch feature1 
+git branch = Check any branches in Git (-r for remote, -a for all, - for previous, -d for delete)
+git branch feature_1 = Copy commit from current branch to branch feature_1 
 git checkout feature_1 = Switch to branch feature_1
 git status = Check current branch, untracked files and track files
 git rm <filename> = Remove file from staging area to unstage
@@ -125,7 +125,7 @@ git branch -d <Branch> = Delete branch <Branch>
 git push origin <Branch>
 ```
 
-### Updating & Merging
+### Updating & Merging through pull request
 ```
 git pull = update local repo to latest commit
 git merge <Branch> = Merge another branch into active <Branch>
