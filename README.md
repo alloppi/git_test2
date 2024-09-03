@@ -1,4 +1,4 @@
- # This repo was used to learn Git (Version Control System)
+# This repo was used to learn Git (Version Control System)
 
 Version control system keeps track of changes to a group of files. When you have a history of these changes, it lets you find specific versions, compare changes between versions, recover files you may have deleted, or revert files to previous versions.
 
@@ -7,7 +7,7 @@ A distributed version control system means that different users maintain their o
 ## Three Sections of a Git Project
 1. Git directory or : (YOUR-PROJECT-PATH/.git/) is where Git stores everything it needs to accurately track the project. This includes metadata and an object database which includes compressed versions of the project files.
 2. Working directory: Pulls the project’s files from the Git directory’s object database and makes local changes to a project.
-3. Staging area: Cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
+3. Staging area: Cache file that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a Snapshot of the files as they are and permanently stores that snapshot in the Git directory.
 
 ## GitHub Workflow
 1. Branching
@@ -42,6 +42,7 @@ Setup GitHub SSH sccess [GitHub SSH](https://docs.github.com/en/authentication/c
 ```
 cd [NAME OF DIRECTORY]
 git clone [HTTPS REPO ADDRESS (GitHub)]
+git remote -v = Check the remote origin
 ```
 3. Four steps in a commit: ‘status’ , ‘add’ , ‘commit’ and ‘push’
 ```
@@ -63,7 +64,7 @@ git add README.md
 git status
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:alloppi/git_test2.git
+git remote add origin git@github.com:alloppi/git_test2.git  /* origin is the alias */
 git push -u origin main
 ```
 
@@ -119,9 +120,12 @@ git restore
 ### Branching
 ```
 git checkout -b <Branch> = Create branch <Branch>
+git branch <Branch> = Create branch <Branch>
+git switch <Branch> = Switch to Branch <Branch>
 git checkout main = Switch back to branch main
 git diff <Branch> = Difference between current branch & <Branch>
 git branch -d <Branch> = Delete branch <Branch>
+git branch -a = Check all branches
 git push origin <Branch>
 ```
 
@@ -137,13 +141,25 @@ git diff <source_branch> <target_branch> = Preview the different before merging
 git tag 1.0.0 <commit_id> 
 ```
 
-### Git Undo, roll back
+### Git Roll back Method 1, Checkout commit, (Virtual Commit, require create new branch and merge into main)
 ```
-git log = Check commit history
+git checkout <commit_id> = Roll back to the hash that commit
+git switch - = Reverse the previous roll back command
+
 git checkout -- <filename> = replace the changes to last HEAD
+```
+
+### Git Roll back Method 2, Revert Commit
+```
+git revert <commit_id> = Roll back to the hash that commit
+```
+
+### Git Roll back Method 3, Reset Commit (permanent delete all the commits after commit_id)
+```
 git reset = Unstage: Undo after git add
 git reset HEAD~1 = Undo the last commit
-git reset <commit_id>
+git reset <commit_id> = 
+git reset --hard <commit_id>
 ```
 
 
@@ -165,9 +181,4 @@ git rebase --interactive <base>
 1. Use SSH instead of HTTPS if pushing to GitHub have error: 
 ```
 git remote set-url origin git@github.com:username/repo.git
-```
-
-### Testing for merging from multiple developers
-```
-Testing 
 ```
