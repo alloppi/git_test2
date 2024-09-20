@@ -157,6 +157,7 @@ git revert <commit_id> = Roll back to the hash that commit
 ### Git Roll back Method 3, Reset Commit (permanent delete all the commits after commit_id)
 ```
 git reset = Unstage: Undo after git add
+get reset -- <file> = Unstage the file
 git reset HEAD~1 = Undo the last commit
 git reset <commit_id> = 
 git reset --hard <commit_id>
