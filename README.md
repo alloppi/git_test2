@@ -162,6 +162,11 @@ git reset <commit_id> =
 git reset --hard <commit_id>
 ```
 
+### Git Roll Back Method 4
+```
+git restore <file> = discard changes in working directory
+git restore --staged <file>..." = to unstage
+```
 
 ### Code review by team and give comment in GitGub
 1. Check every changes
