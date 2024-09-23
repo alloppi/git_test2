@@ -99,8 +99,9 @@ git log --oneline --graph = show commit history in one line
 git show <hash> = show diff for that commit image
 git restore <filename> = discard changes after git commit
 git diff = show different current file contenet vs last commmited
-git commit --amend -m "Amend commit message after commited" = amend commited message
+git commit --amend -m "Amend commit message after commited" = amend last commited message
 git commit -a -m "update content" = Add and commit together
+git rebase -i <hash_id> = Interactive changed commit information
 
 git remote -v
 git branch
