@@ -93,11 +93,14 @@ git checkout feature_1 = Switch to branch feature_1
 git status = Check current branch, untracked files and track files
 git rm <filename> = Remove file from staging area to unstage
 git rm -r --cached . = Recusively remove all files from staging area to unstage
+git mv <filename> <newfile> =  Rename file
 git log = show all commit history
+git log --oneline --graph = show commit history in one line
 git show <hash> = show diff for that commit image
 git restore <filename> = discard changes after git commit
 git diff = show different current file contenet vs last commmited
 git commit --amend -m "Amend commit message after commited" = amend commited message
+git commit -a -m "update content" = Add and commit together
 
 git remote -v
 git branch
@@ -146,7 +149,7 @@ git tag 1.0.0 <commit_id>
 git checkout <commit_id> = Roll back to the hash that commit
 git switch - = Reverse the previous roll back command
 
-git checkout -- <filename> = replace the changes to last HEAD
+git checkout -- <filename> = discard the changes to last HEAD
 ```
 
 ### Git Roll back Method 2, Revert Commit
