@@ -100,8 +100,10 @@ git show <hash> = show diff for that commit image
 git restore <filename> = discard changes after git commit
 git diff = show different current file contenet vs last commmited
 git commit --amend -m "Amend commit message after commited" = amend last commited message
+git comment --amend --no-edit = Add to last commit
 git commit -a -m "update content" = Add and commit together
 git rebase -i <hash_id> = Interactive changed commit information
+git reset = Undo last commit
 
 git remote -v
 git branch
