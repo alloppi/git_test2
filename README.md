@@ -96,6 +96,7 @@ git rm -r --cached . = Recusively remove all files from staging area to unstage
 git mv <filename> <newfile> =  Rename file
 git log = show all commit history
 git log --oneline --graph = show commit history in one line
+git log -g = Show Reflog all commit history
 git show <hash> = show diff for that commit image
 git restore <filename> = discard changes after git commit
 git diff = show different current file contenet vs last commmited
@@ -104,6 +105,8 @@ git comment --amend --no-edit = Add to last commit
 git commit -a -m "update content" = Add and commit together
 git rebase -i <hash_id> = Interactive changed commit information
 git reset = Undo last commit
+git blame <filename> = Show user, time commit the source
+git reflog = Show all commit, reset, etc. history
 
 git remote -v
 git branch
@@ -149,10 +152,12 @@ git tag 1.0.0 <commit_id>
 
 ### Git Roll back Method 1, Checkout commit, (Virtual Commit, require create new branch and merge into main)
 ```
-git checkout <commit_id> = Roll back to the hash that commit
+git checkout <filename> = restore the file changes from staged or last HEAD 
+git checkout . = restore all files that deleted from staged or last HEAD
+git checkout <commit_id> = Roll back to the hash that commit and update to staged area
+git checkout HEAD~2 <filename> = Roll back file to HEAD-2 commit and update to staged area
 git switch - = Reverse the previous roll back command
 
-git checkout -- <filename> = discard the changes to last HEAD
 ```
 
 ### Git Roll back Method 2, Revert Commit
@@ -166,13 +171,28 @@ git reset = Unstage: Undo after git add
 get reset -- <file> = Unstage the file
 git reset HEAD~1 = Undo the last commit
 git reset <commit_id> = 
-git reset --hard <commit_id>
+git reset --hard <commit_id> = Undo the commit to both staging area and working directory
 ```
 
 ### Git Roll Back Method 4
 ```
 git restore <file> = discard changes in working directory
 git restore --staged <file>..." = to unstage
+```
+
+### Git Undo Example: Undo last Commit
+[Detail explanation](https://gitbook.tw/chapters/using-git/reset-commit) 
+```
+git reset HEAD~1 = Undo the last commit to save on staging area OR
+git reset HEAD^ = Undo the last commit, ^ means one previous ^^ means 2 previous OR
+git reset master^ = Undo the last commit
+git reset HEAD~2 = Undo the 2 previous commit
+git checkout . = Copy from staging area to working directory
+```
+
+### What is HEAD in Git
+```
+cat .git/HEAD = Show the head of the branch 
 ```
 
 ### Code review by team and give comment in GitGub
