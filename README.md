@@ -92,6 +92,7 @@ git branch feature_1 = Copy commit from current branch to branch feature1
 git branch -m feature_1 feature_2 = Rename branch name from feature_1 to feature_2
 git branch -d feature_1 = Delete branch feature_1
 git checkout feature_1 = Switch to branch feature_1
+git checkout -b feature_1 = Create and switch to feature_1
 git status = Check current branch, untracked files and track files
 git rm <filename> = Remove file from staging area to unstage
 git rm -r --cached . = Recusively remove all files from staging area to unstage
@@ -109,8 +110,6 @@ git rebase -i <hash_id> = Interactive changed commit information
 git reset = Undo last commit
 git blame <filename> = Show user, time commit the source
 git reflog = Show all commit, reset, etc. history
-git ls-tree -r --name-only <hashID> = List all files in a branch commit
-git diff <branchA>:<fileA> <branchB>:<fileB> = Compare file from different branch
 
 git remote -v
 git branch
@@ -143,6 +142,12 @@ git push origin <Branch>
 ```
 
 ### Updating & Merging
+[Detail explanation](https://gitbook.tw/chapters/branch/merge-branch)
+```
+git checkout main = Switch to Branch that will be merged i.e. main
+git merge <branch> = Merage another branch into active <branch>
+```
+
 ```
 git pull = update local repo to latest commit
 git merge <Branch> = Merge another branch into active <Branch>
@@ -184,16 +189,7 @@ git restore <file> = discard changes in working directory
 git restore --staged <file>..." = to unstage
 ```
 
-### Git Undo Exmaple: Undo delete anb restore from Staging Area
-[Detail explantion](https://gitbook.tw/chapters/using-git/recover-deleted-files)
-```
-git checkout <filename> = Undo delete and restore HEAD from staging area
-git checkout . = Undelete all files
-git checkout HEAD~2 <filename>
-
-```
-
-### Git Undo Example: Undo from last Commit
+### Git Undo Example: Undo last Commit
 [Detail explanation](https://gitbook.tw/chapters/using-git/reset-commit) 
 ```
 git reset HEAD~1 = Undo the last commit to save on staging area OR
@@ -221,10 +217,6 @@ cat .git/HEAD = Show the head of the branch
 ```
 git rebase --interactive <base>
 ```
-
-### Handle different situation
-[Undo local branch delete](https://stackoverflow.com/questions/4025916/git-undo-local-branch-delete)
-[List all files in a branch, compare file from different branch](https://stackoverflow.com/questions/1910783/git-1-list-all-files-in-a-branch-2-compare-files-from-different-branch)
 
 ### Common Error in GitHub
 1. Use SSH instead of HTTPS if pushing to GitHub have error: 
