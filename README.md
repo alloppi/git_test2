@@ -1,4 +1,4 @@
-# This repo was used to learn Git (Version Control System)
+# This repo was used to learn Git and GitHub (Version Control System)
 
 Version control system keeps track of changes to a group of files. When you have a history of these changes, it lets you find specific versions, compare changes between versions, recover files you may have deleted, or revert files to previous versions.
 
@@ -23,8 +23,8 @@ A distributed version control system means that different users maintain their o
 sudo apt update
 sudo apt-get install git
 git --version
-git config --global user.name "Alan Chan"
-git config --global user.email "alloppi@gmail.com"
+git config --global user.name "xxx"
+git config --global user.email "xxx@example.com"
 git config --global color.ui true
 git config --global core.editor "code --wait"
 git config --global diff.tool vscode
